@@ -50,6 +50,16 @@ class WiredashLocalizationsDe extends WiredashLocalizations {
   String get feedbackStep3ScreenshotOverviewAddScreenshotButton => 'Screenshot';
 
   @override
+  String get feedbackStep3ScreenshotOverviewTakePhotoButton => 'Foto aufnehmen';
+
+  @override
+  String get feedbackStep3ScreenshotOverviewPickFromGalleryButton => 'Aus Galerie wählen';
+
+  @override
+  String get feedbackStep3ScreenshotOverviewPhotoPermissionDeniedMessage =>
+      'Berechtigung verweigert. Aktiviere den Zugriff auf Kamera oder Fotos in den Einstellungen, um ein Foto anzuhängen.';
+
+  @override
   String get feedbackStep3ScreenshotBarNavigateTitle => 'Screenshot erstellen';
 
   @override

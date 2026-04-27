@@ -16,6 +16,9 @@
   "feedbackStep3ScreenshotOverviewDescription": "Uygulamada dolanabilecek ve ne zaman ekran görüntüsü alacağınızı seçebileceksiniz",
   "feedbackStep3ScreenshotOverviewSkipButton": "Geç",
   "feedbackStep3ScreenshotOverviewAddScreenshotButton": "Ekran görüntüsü ekle",
+  "feedbackStep3ScreenshotOverviewTakePhotoButton": "Fotoğraf çek",
+  "feedbackStep3ScreenshotOverviewPickFromGalleryButton": "Galeriden seç",
+  "feedbackStep3ScreenshotOverviewPhotoPermissionDeniedMessage": "İzin reddedildi. Fotoğraf eklemek için Ayarlar'dan kamera veya fotoğraflara erişimi etkinleştirin.",
 
   "feedbackStep3ScreenshotBarNavigateTitle": "Ekran görüntüsü al",
   "feedbackStep3ScreenshotBarDrawTitle": "Bir şeyler göstermek için ekranın üzerine çiz",

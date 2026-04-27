@@ -48,6 +48,16 @@ class WiredashLocalizationsAr extends WiredashLocalizations {
       'إضافة لقطة للشاشة';
 
   @override
+  String get feedbackStep3ScreenshotOverviewTakePhotoButton => 'التقط صورة';
+
+  @override
+  String get feedbackStep3ScreenshotOverviewPickFromGalleryButton => 'اختر من المعرض';
+
+  @override
+  String get feedbackStep3ScreenshotOverviewPhotoPermissionDeniedMessage =>
+      'تم رفض الإذن. فعّل الوصول إلى الكاميرا أو الصور من الإعدادات لإرفاق صورة.';
+
+  @override
   String get feedbackStep3ScreenshotBarNavigateTitle => 'أخذ لقطة للشاشة';
 
   @override

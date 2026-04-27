@@ -52,6 +52,16 @@ class WiredashLocalizationsHu extends WiredashLocalizations {
       'Képernyőkép csatolása';
 
   @override
+  String get feedbackStep3ScreenshotOverviewTakePhotoButton => 'Fotó készítése';
+
+  @override
+  String get feedbackStep3ScreenshotOverviewPickFromGalleryButton => 'Választás galériából';
+
+  @override
+  String get feedbackStep3ScreenshotOverviewPhotoPermissionDeniedMessage =>
+      'Engedély megtagadva. Engedélyezd a kamera vagy a fotók elérését a Beállításokban a fotó csatolásához.';
+
+  @override
   String get feedbackStep3ScreenshotBarNavigateTitle => 'Készíts képernyőképet';
 
   @override

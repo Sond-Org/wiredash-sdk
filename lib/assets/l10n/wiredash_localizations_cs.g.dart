@@ -53,6 +53,16 @@ class WiredashLocalizationsCs extends WiredashLocalizations {
       'Přidat snímek obrazovky';
 
   @override
+  String get feedbackStep3ScreenshotOverviewTakePhotoButton => 'Pořídit fotku';
+
+  @override
+  String get feedbackStep3ScreenshotOverviewPickFromGalleryButton => 'Vybrat z galerie';
+
+  @override
+  String get feedbackStep3ScreenshotOverviewPhotoPermissionDeniedMessage =>
+      'Oprávnění zamítnuto. V Nastavení povolte přístup k fotoaparátu nebo fotkám pro přidání fotky.';
+
+  @override
   String get feedbackStep3ScreenshotBarNavigateTitle =>
       'Pořiďte snímek obrazovky';
 

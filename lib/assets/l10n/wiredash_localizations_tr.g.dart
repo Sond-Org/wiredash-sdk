@@ -52,6 +52,16 @@ class WiredashLocalizationsTr extends WiredashLocalizations {
       'Ekran görüntüsü ekle';
 
   @override
+  String get feedbackStep3ScreenshotOverviewTakePhotoButton => 'Fotoğraf çek';
+
+  @override
+  String get feedbackStep3ScreenshotOverviewPickFromGalleryButton => 'Galeriden seç';
+
+  @override
+  String get feedbackStep3ScreenshotOverviewPhotoPermissionDeniedMessage =>
+      'İzin reddedildi. Fotoğraf eklemek için Ayarlar\'dan kamera veya fotoğraflara erişimi etkinleştirin.';
+
+  @override
   String get feedbackStep3ScreenshotBarNavigateTitle => 'Ekran görüntüsü al';
 
   @override

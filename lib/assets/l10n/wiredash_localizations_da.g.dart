@@ -52,6 +52,16 @@ class WiredashLocalizationsDa extends WiredashLocalizations {
       'Tilføj skærmbillede';
 
   @override
+  String get feedbackStep3ScreenshotOverviewTakePhotoButton => 'Tag billede';
+
+  @override
+  String get feedbackStep3ScreenshotOverviewPickFromGalleryButton => 'Vælg fra galleri';
+
+  @override
+  String get feedbackStep3ScreenshotOverviewPhotoPermissionDeniedMessage =>
+      'Tilladelse nægtet. Aktivér adgang til kamera eller fotos i Indstillinger for at vedhæfte et foto.';
+
+  @override
   String get feedbackStep3ScreenshotBarNavigateTitle => 'Tag et skærmbillede';
 
   @override

@@ -53,6 +53,16 @@ class WiredashLocalizationsEs extends WiredashLocalizations {
       'Hacer captura';
 
   @override
+  String get feedbackStep3ScreenshotOverviewTakePhotoButton => 'Tomar foto';
+
+  @override
+  String get feedbackStep3ScreenshotOverviewPickFromGalleryButton => 'Elegir de galería';
+
+  @override
+  String get feedbackStep3ScreenshotOverviewPhotoPermissionDeniedMessage =>
+      'Permiso denegado. Activa el acceso a la cámara o las fotos en Ajustes para adjuntar una foto.';
+
+  @override
   String get feedbackStep3ScreenshotBarNavigateTitle =>
       'Haz una captura de pantalla';
 

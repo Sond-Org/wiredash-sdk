@@ -16,6 +16,9 @@
   "feedbackStep3ScreenshotOverviewDescription": "می‌توانید برنامه را پیمایش کنید و انتخاب کنید چه زمانی اسکرین شات بگیرید",
   "feedbackStep3ScreenshotOverviewSkipButton": "رد شدن",
   "feedbackStep3ScreenshotOverviewAddScreenshotButton": "اسکرین-شات جدید",
+  "feedbackStep3ScreenshotOverviewTakePhotoButton": "گرفتن عکس",
+  "feedbackStep3ScreenshotOverviewPickFromGalleryButton": "انتخاب از گالری",
+  "feedbackStep3ScreenshotOverviewPhotoPermissionDeniedMessage": "اجازه دسترسی رد شد. برای پیوست کردن عکس، از تنظیمات به دوربین یا گالری دسترسی دهید.",
 
   "feedbackStep3ScreenshotBarNavigateTitle": "اسکرین-شات بگیر",
   "feedbackStep3ScreenshotBottomBarTitle": "برای شفاف سازی مشکل اسکرین-شات اضافه کن",

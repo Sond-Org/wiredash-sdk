@@ -16,6 +16,9 @@
   "feedbackStep3ScreenshotOverviewDescription": "Potrai navigare nell'app e scegliere quando acquisire uno screenshot",
   "feedbackStep3ScreenshotOverviewSkipButton": "Salta",
   "feedbackStep3ScreenshotOverviewAddScreenshotButton": "Aggiungi screenshot",
+  "feedbackStep3ScreenshotOverviewTakePhotoButton": "Scatta foto",
+  "feedbackStep3ScreenshotOverviewPickFromGalleryButton": "Scegli dalla galleria",
+  "feedbackStep3ScreenshotOverviewPhotoPermissionDeniedMessage": "Autorizzazione negata. Abilita l'accesso a fotocamera o foto nelle Impostazioni per allegare una foto.",
 
   "feedbackStep3ScreenshotBarNavigateTitle": "Fai uno screenshot",
   "feedbackStep3ScreenshotBottomBarTitle": "Includi uno screenshot per contestualizzare meglio",

@@ -15,6 +15,9 @@
   "feedbackStep3ScreenshotOverviewDescription": "Du kannst die App normal bedienen, bevor du einen Screenshot erstellst",
   "feedbackStep3ScreenshotOverviewSkipButton": "Überspringen",
   "feedbackStep3ScreenshotOverviewAddScreenshotButton": "Screenshot",
+  "feedbackStep3ScreenshotOverviewTakePhotoButton": "Foto aufnehmen",
+  "feedbackStep3ScreenshotOverviewPickFromGalleryButton": "Aus Galerie wählen",
+  "feedbackStep3ScreenshotOverviewPhotoPermissionDeniedMessage": "Berechtigung verweigert. Aktiviere den Zugriff auf Kamera oder Fotos in den Einstellungen, um ein Foto anzuhängen.",
 
   "feedbackStep3ScreenshotBarNavigateTitle": "Screenshot erstellen",
   "feedbackStep3ScreenshotBottomBarTitle": "Füge bei bedarf einen Screenshot hinzu",

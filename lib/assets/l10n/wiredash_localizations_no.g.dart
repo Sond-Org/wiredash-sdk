@@ -52,6 +52,16 @@ class WiredashLocalizationsNo extends WiredashLocalizations {
       'Legg til skjermbilde';
 
   @override
+  String get feedbackStep3ScreenshotOverviewTakePhotoButton => 'Ta bilde';
+
+  @override
+  String get feedbackStep3ScreenshotOverviewPickFromGalleryButton => 'Velg fra galleri';
+
+  @override
+  String get feedbackStep3ScreenshotOverviewPhotoPermissionDeniedMessage =>
+      'Tilgang avslått. Aktiver tilgang til kamera eller bilder i Innstillinger for å legge ved et bilde.';
+
+  @override
   String get feedbackStep3ScreenshotBarNavigateTitle => 'Ta et skjermbilde';
 
   @override

@@ -51,6 +51,16 @@ class WiredashLocalizationsEn extends WiredashLocalizations {
       'Add screenshot';
 
   @override
+  String get feedbackStep3ScreenshotOverviewTakePhotoButton => 'Take photo';
+
+  @override
+  String get feedbackStep3ScreenshotOverviewPickFromGalleryButton => 'Pick from gallery';
+
+  @override
+  String get feedbackStep3ScreenshotOverviewPhotoPermissionDeniedMessage =>
+      'Permission denied. Enable camera or photo access in Settings to attach a photo.';
+
+  @override
   String get feedbackStep3ScreenshotBarNavigateTitle => 'Take a screenshot';
 
   @override

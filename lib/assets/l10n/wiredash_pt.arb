@@ -16,6 +16,9 @@
   "feedbackStep3ScreenshotOverviewDescription": "Você será capaz de navegar pelo app e escolher quando capturar a tela",
   "feedbackStep3ScreenshotOverviewSkipButton": "Pular",
   "feedbackStep3ScreenshotOverviewAddScreenshotButton": "Adicionar Captura de Tela",
+  "feedbackStep3ScreenshotOverviewTakePhotoButton": "Tirar foto",
+  "feedbackStep3ScreenshotOverviewPickFromGalleryButton": "Escolher da galeria",
+  "feedbackStep3ScreenshotOverviewPhotoPermissionDeniedMessage": "Permissão negada. Ative o acesso à câmera ou às fotos nas Configurações para anexar uma foto.",
 
   "feedbackStep3ScreenshotBarNavigateTitle": "Faça uma captura de tela",
   "feedbackStep3ScreenshotBarDrawTitle": "Indique os detalhes relevantes",

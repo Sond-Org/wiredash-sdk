@@ -16,6 +16,9 @@
   "feedbackStep3ScreenshotOverviewDescription": "يمكنك تصفح التطبيق وأختيار لقطة الشاشة التي ترغب بها",
   "feedbackStep3ScreenshotOverviewSkipButton": "تخطي",
   "feedbackStep3ScreenshotOverviewAddScreenshotButton": "إضافة لقطة للشاشة",
+  "feedbackStep3ScreenshotOverviewTakePhotoButton": "التقط صورة",
+  "feedbackStep3ScreenshotOverviewPickFromGalleryButton": "اختر من المعرض",
+  "feedbackStep3ScreenshotOverviewPhotoPermissionDeniedMessage": "تم رفض الإذن. فعّل الوصول إلى الكاميرا أو الصور من الإعدادات لإرفاق صورة.",
 
   "feedbackStep3ScreenshotBarNavigateTitle": "أخذ لقطة للشاشة",
   "feedbackStep3ScreenshotBarDrawTitle": "أرسم على الشاشة لإضافة تأشيرة",

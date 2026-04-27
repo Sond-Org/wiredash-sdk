@@ -311,6 +311,30 @@ class FeedbackModel extends ChangeNotifier2 {
     notifyListeners();
   }
 
+  /// Adds an externally provided photo (e.g. from the camera or photo library)
+  /// as a screenshot attachment without entering the screen-capture flow.
+  ///
+  /// Mirrors the 3-attachment cap enforced by the screenshot capture flow.
+  /// If metadata collection fails the attachment is not added, leaving the
+  /// model in a consistent state.
+  Future<void> addPhotoAttachment(Uint8List bytes) async {
+    if (_attachments.length >= 3) {
+      return;
+    }
+    if (_customizableMetadata == null) {
+      try {
+        await _collectCustomizableMetaData();
+      } catch (_) {
+        return;
+      }
+    }
+    final attachment = PersistedAttachment.screenshot(
+      file: FileDataEventuallyOnDisk.inMemory(bytes),
+    );
+    _attachments.add(attachment);
+    notifyListeners();
+  }
+
   /// Allow devs to collect additional information
   Future<CustomizableWiredashMetaData> _collectCustomizableMetaData() async {
     final fallbackCollector = _services

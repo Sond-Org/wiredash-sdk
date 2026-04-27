@@ -16,6 +16,9 @@
   "feedbackStep3ScreenshotOverviewDescription": "Podrás navegar por la aplicación y elegir cuándo hacer la captura de pantalla",
   "feedbackStep3ScreenshotOverviewSkipButton": "Omitir",
   "feedbackStep3ScreenshotOverviewAddScreenshotButton": "Hacer captura",
+  "feedbackStep3ScreenshotOverviewTakePhotoButton": "Tomar foto",
+  "feedbackStep3ScreenshotOverviewPickFromGalleryButton": "Elegir de galería",
+  "feedbackStep3ScreenshotOverviewPhotoPermissionDeniedMessage": "Permiso denegado. Activa el acceso a la cámara o las fotos en Ajustes para adjuntar una foto.",
 
   "feedbackStep3ScreenshotBarNavigateTitle": "Haz una captura de pantalla",
   "feedbackStep3ScreenshotBottomBarTitle": "Incluye una captura para brindar más contexto",

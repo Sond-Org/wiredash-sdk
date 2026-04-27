@@ -199,6 +199,24 @@ abstract class WiredashLocalizations {
   /// **'Add screenshot'**
   String get feedbackStep3ScreenshotOverviewAddScreenshotButton;
 
+  /// No description provided for @feedbackStep3ScreenshotOverviewTakePhotoButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Take photo'**
+  String get feedbackStep3ScreenshotOverviewTakePhotoButton;
+
+  /// No description provided for @feedbackStep3ScreenshotOverviewPickFromGalleryButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Pick from gallery'**
+  String get feedbackStep3ScreenshotOverviewPickFromGalleryButton;
+
+  /// No description provided for @feedbackStep3ScreenshotOverviewPhotoPermissionDeniedMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Permission denied. Enable camera or photo access in Settings to attach a photo.'**
+  String get feedbackStep3ScreenshotOverviewPhotoPermissionDeniedMessage;
+
   /// No description provided for @feedbackStep3ScreenshotBarNavigateTitle.
   ///
   /// In en, this message translates to:

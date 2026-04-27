@@ -15,6 +15,9 @@
   "feedbackStep3ScreenshotOverviewDescription": "Navigálhatsz az alkalmazásban, eldöntheted mikor készítesz képernyőképet",
   "feedbackStep3ScreenshotOverviewSkipButton": "Átugrás",
   "feedbackStep3ScreenshotOverviewAddScreenshotButton": "Képernyőkép csatolása",
+  "feedbackStep3ScreenshotOverviewTakePhotoButton": "Fotó készítése",
+  "feedbackStep3ScreenshotOverviewPickFromGalleryButton": "Választás galériából",
+  "feedbackStep3ScreenshotOverviewPhotoPermissionDeniedMessage": "Engedély megtagadva. Engedélyezd a kamera vagy a fotók elérését a Beállításokban a fotó csatolásához.",
 
   "feedbackStep3ScreenshotBarNavigateTitle": "Készíts képernyőképet",
   "feedbackStep3ScreenshotBarDrawTitle": "Rajzolj a képernyőre hogy emeld ki a lényeget",

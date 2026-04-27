@@ -16,6 +16,9 @@
   "feedbackStep3ScreenshotOverviewDescription": "Budete moci procházet aplikací a vybrat si, kdy chcete pořídit snímek obrazovky.",
   "feedbackStep3ScreenshotOverviewSkipButton": "Přeskočit",
   "feedbackStep3ScreenshotOverviewAddScreenshotButton": "Přidat snímek obrazovky",
+  "feedbackStep3ScreenshotOverviewTakePhotoButton": "Pořídit fotku",
+  "feedbackStep3ScreenshotOverviewPickFromGalleryButton": "Vybrat z galerie",
+  "feedbackStep3ScreenshotOverviewPhotoPermissionDeniedMessage": "Oprávnění zamítnuto. V Nastavení povolte přístup k fotoaparátu nebo fotkám pro přidání fotky.",
 
   "feedbackStep3ScreenshotBarNavigateTitle": "Pořiďte snímek obrazovky",
   "feedbackStep3ScreenshotBarDrawTitle": "Kreslení na obrazovce pro přidání zvýraznění",

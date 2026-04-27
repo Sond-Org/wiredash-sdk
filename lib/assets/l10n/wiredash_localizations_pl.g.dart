@@ -52,6 +52,16 @@ class WiredashLocalizationsPl extends WiredashLocalizations {
       'Dodaj zrzut ekranu';
 
   @override
+  String get feedbackStep3ScreenshotOverviewTakePhotoButton => 'Zrób zdjęcie';
+
+  @override
+  String get feedbackStep3ScreenshotOverviewPickFromGalleryButton => 'Wybierz z galerii';
+
+  @override
+  String get feedbackStep3ScreenshotOverviewPhotoPermissionDeniedMessage =>
+      'Brak uprawnień. Włącz dostęp do aparatu lub zdjęć w Ustawieniach, aby dodać zdjęcie.';
+
+  @override
   String get feedbackStep3ScreenshotBarNavigateTitle => 'Wykonaj zrzut ekranu';
 
   @override

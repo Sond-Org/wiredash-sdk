@@ -15,6 +15,9 @@
   "feedbackStep3ScreenshotOverviewDescription": "Vous pourrez naviguer dans l'application et choisir l'écran à capturer",
   "feedbackStep3ScreenshotOverviewSkipButton": "Passer",
   "feedbackStep3ScreenshotOverviewAddScreenshotButton": "Capturer l'écran",
+  "feedbackStep3ScreenshotOverviewTakePhotoButton": "Prendre une photo",
+  "feedbackStep3ScreenshotOverviewPickFromGalleryButton": "Choisir dans la galerie",
+  "feedbackStep3ScreenshotOverviewPhotoPermissionDeniedMessage": "Autorisation refusée. Activez l'accès à l'appareil photo ou aux photos dans les Réglages pour joindre une photo.",
 
   "feedbackStep3ScreenshotBarNavigateTitle": "Prendre une capture d'écran",
   "feedbackStep3ScreenshotBarDrawTitle": "Dessiner sur l'écran pour en mettre en avant une partie",

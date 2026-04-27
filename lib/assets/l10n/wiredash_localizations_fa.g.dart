@@ -49,6 +49,16 @@ class WiredashLocalizationsFa extends WiredashLocalizations {
       'اسکرین-شات جدید';
 
   @override
+  String get feedbackStep3ScreenshotOverviewTakePhotoButton => 'گرفتن عکس';
+
+  @override
+  String get feedbackStep3ScreenshotOverviewPickFromGalleryButton => 'انتخاب از گالری';
+
+  @override
+  String get feedbackStep3ScreenshotOverviewPhotoPermissionDeniedMessage =>
+      'اجازه دسترسی رد شد. برای پیوست کردن عکس، از تنظیمات به دوربین یا گالری دسترسی دهید.';
+
+  @override
   String get feedbackStep3ScreenshotBarNavigateTitle => 'اسکرین-شات بگیر';
 
   @override

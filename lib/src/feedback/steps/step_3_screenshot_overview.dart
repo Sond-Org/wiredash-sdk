@@ -1,4 +1,6 @@
 import 'package:flutter/widgets.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:wiredash/src/core/services/error_report.dart';
 import 'package:wiredash/src/core/theme/color_ext.dart';
 import 'package:wiredash/src/core/theme/wirecons.dart';
 import 'package:wiredash/src/core/theme/wiredash_theme.dart';
@@ -13,6 +15,59 @@ import 'package:wiredash/src/feedback/feedback_flow.dart';
 import 'package:wiredash/src/feedback/feedback_model.dart';
 import 'package:wiredash/src/feedback/ui/base_click_target.dart';
 import 'package:wiredash/src/utils/standard_kt.dart';
+
+/// Picks an image from [source] and attaches its bytes to the feedback as a
+/// screenshot.
+///
+/// Returns `true` when the picker completed normally (whether the user picked
+/// an image or cancelled). Returns `false` when picking failed — typically
+/// because permissions were denied — so the caller can surface a localized
+/// error. Failures are also reported through [reportWiredashError].
+Future<bool> _pickAndAttachPhoto(
+  BuildContext context,
+  ImageSource source,
+) async {
+  final feedback = context.readFeedbackModel;
+  XFile? image;
+  try {
+    image = await ImagePicker().pickImage(
+      source: source,
+      maxWidth: 1920,
+      imageQuality: 85,
+    );
+  } catch (e, s) {
+    reportWiredashError(
+      e,
+      s,
+      'Failed to pick photo from ${source == ImageSource.camera ? 'camera' : 'gallery'} for feedback',
+    );
+    return false;
+  }
+  if (image == null) return true;
+  final bytes = await image.readAsBytes();
+  await feedback.addPhotoAttachment(bytes);
+  return true;
+}
+
+/// Inline error message styled for the screenshot step. Hidden when [message]
+/// is `null`.
+class _PhotoPickerError extends StatelessWidget {
+  const _PhotoPickerError({required this.message});
+
+  final String? message;
+
+  @override
+  Widget build(BuildContext context) {
+    if (message == null) return const SizedBox.shrink();
+    return Padding(
+      padding: const EdgeInsets.only(top: 12),
+      child: Text(
+        message!,
+        style: TextStyle(color: context.theme.errorColor),
+      ),
+    );
+  }
+}
 
 class Step3ScreenshotOverview extends StatefulWidget {
   const Step3ScreenshotOverview({super.key});
@@ -52,6 +107,18 @@ class Step3NoAttachments extends StatefulWidget {
 }
 
 class _Step3NoAttachmentsState extends State<Step3NoAttachments> {
+  String? _photoError;
+
+  Future<void> _handlePick(ImageSource source) async {
+    setState(() => _photoError = null);
+    final ok = await _pickAndAttachPhoto(context, source);
+    if (!mounted || ok) return;
+    setState(() {
+      _photoError = context
+          .l10n.feedbackStep3ScreenshotOverviewPhotoPermissionDeniedMessage;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return StepPageScaffold(
@@ -99,6 +166,20 @@ class _Step3NoAttachmentsState extends State<Step3NoAttachments> {
                         },
                       ),
                       TronButton(
+                        color: context.theme.secondaryColor,
+                        label: context.l10n
+                            .feedbackStep3ScreenshotOverviewTakePhotoButton,
+                        leadingIcon: Wirecons.camera,
+                        onTap: () => _handlePick(ImageSource.camera),
+                      ),
+                      TronButton(
+                        color: context.theme.secondaryColor,
+                        label: context.l10n
+                            .feedbackStep3ScreenshotOverviewPickFromGalleryButton,
+                        leadingIcon: Wirecons.photograph,
+                        onTap: () => _handlePick(ImageSource.gallery),
+                      ),
+                      TronButton(
                         label: context.l10n
                             .feedbackStep3ScreenshotOverviewAddScreenshotButton,
                         trailingIcon: Wirecons.arrow_right,
@@ -112,16 +193,34 @@ class _Step3NoAttachmentsState extends State<Step3NoAttachments> {
               ],
             ),
           ),
+          _PhotoPickerError(message: _photoError),
         ],
       ),
     );
   }
 }
 
-class Step3WithGallery extends StatelessWidget {
+class Step3WithGallery extends StatefulWidget {
   const Step3WithGallery({
     super.key,
   });
+
+  @override
+  State<Step3WithGallery> createState() => _Step3WithGalleryState();
+}
+
+class _Step3WithGalleryState extends State<Step3WithGallery> {
+  String? _photoError;
+
+  Future<void> _handlePick(ImageSource source) async {
+    setState(() => _photoError = null);
+    final ok = await _pickAndAttachPhoto(context, source);
+    if (!mounted || ok) return;
+    setState(() {
+      _photoError = context
+          .l10n.feedbackStep3ScreenshotOverviewPhotoPermissionDeniedMessage;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -168,6 +267,35 @@ class Step3WithGallery extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 16),
+              if (context.watchFeedbackModel.attachments.length < 3)
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 12),
+                  child: Wrap(
+                    spacing: 12,
+                    runSpacing: 8,
+                    children: [
+                      TronButton(
+                        color: context.theme.secondaryColor,
+                        label: context.l10n
+                            .feedbackStep3ScreenshotOverviewTakePhotoButton,
+                        leadingIcon: Wirecons.camera,
+                        onTap: () => _handlePick(ImageSource.camera),
+                      ),
+                      TronButton(
+                        color: context.theme.secondaryColor,
+                        label: context.l10n
+                            .feedbackStep3ScreenshotOverviewPickFromGalleryButton,
+                        leadingIcon: Wirecons.photograph,
+                        onTap: () => _handlePick(ImageSource.gallery),
+                      ),
+                    ],
+                  ),
+                ),
+              if (_photoError != null)
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 12),
+                  child: _PhotoPickerError(message: _photoError),
+                ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

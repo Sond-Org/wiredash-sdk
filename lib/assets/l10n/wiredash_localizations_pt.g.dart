@@ -53,6 +53,16 @@ class WiredashLocalizationsPt extends WiredashLocalizations {
       'Adicionar Captura de Tela';
 
   @override
+  String get feedbackStep3ScreenshotOverviewTakePhotoButton => 'Tirar foto';
+
+  @override
+  String get feedbackStep3ScreenshotOverviewPickFromGalleryButton => 'Escolher da galeria';
+
+  @override
+  String get feedbackStep3ScreenshotOverviewPhotoPermissionDeniedMessage =>
+      'Permissão negada. Ative o acesso à câmera ou às fotos nas Configurações para anexar uma foto.';
+
+  @override
   String get feedbackStep3ScreenshotBarNavigateTitle =>
       'Faça uma captura de tela';
 
