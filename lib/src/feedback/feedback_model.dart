@@ -461,23 +461,67 @@ class FeedbackModel extends ChangeNotifier2 {
       }
       return userEmail;
     }();
+    final metadata = AllMetaData.from(
+      customizableMetadata: customizableMetadata,
+      sessionMetadata: sessionMetadata,
+      fixedMetadata: fixedMetadata,
+      flutterInfo: flutterInfo,
+      installId: deviceId,
+      environment: environment,
+      email: email,
+    );
     return FeedbackItem(
       feedbackId: _services.wuidGenerator.localFeedbackId(),
       attachments: _attachments,
       labels: [..._selectedLabels, ...labels.where((it) => it.hidden == true)]
           .map((it) => it.id)
           .toList(),
-      message: _feedbackMessage!,
-      metadata: AllMetaData.from(
-        customizableMetadata: customizableMetadata,
-        sessionMetadata: sessionMetadata,
-        fixedMetadata: fixedMetadata,
-        flutterInfo: flutterInfo,
-        installId: deviceId,
-        environment: environment,
-        email: email,
-      ),
+      message: _appendMetaDataToMessage(_feedbackMessage!, metadata),
+      metadata: metadata,
     );
+  }
+
+  /// Appends a human-readable dump of the collected [metadata] to the end of
+  /// the feedback [message].
+  ///
+  /// The console only renders custom metadata intermittently, so embedding it
+  /// directly in the message guarantees it is always available to whoever reads
+  /// the feedback.
+  String _appendMetaDataToMessage(String message, AllMetaData metadata) {
+    final lines = <String>[];
+
+    void addLine(String key, Object? value) {
+      if (value == null) return;
+      final stringValue = value.toString();
+      if (stringValue.isEmpty) return;
+      lines.add('$key: $stringValue');
+    }
+
+    addLine('userId', metadata.userId);
+    addLine('userEmail', metadata.userEmail);
+    addLine('environment', metadata.environment);
+    addLine('appName', metadata.appName);
+    addLine('buildVersion', metadata.buildVersion);
+    addLine('buildNumber', metadata.buildNumber);
+    addLine('buildCommit', metadata.buildCommit);
+    addLine('bundleId', metadata.bundleId);
+    addLine('platformOS', metadata.platformOS);
+    addLine('platformOSVersion', metadata.platformOSVersion);
+    addLine('deviceModel', metadata.deviceModel);
+    addLine('appLocale', metadata.appLocale);
+    addLine('installId', metadata.installId);
+    addLine('sdkVersion', metadata.sdkVersion);
+
+    final custom = metadata.custom;
+    if (custom != null) {
+      for (final entry in custom.entries) {
+        addLine('custom.${entry.key}', entry.value);
+      }
+    }
+
+    if (lines.isEmpty) return message;
+
+    return '$message\n\n--- Metadata ---\n${lines.join('\n')}';
   }
 
   @override
